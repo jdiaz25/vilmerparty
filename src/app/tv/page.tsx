@@ -407,16 +407,20 @@ export default function TVPage() {
       </AnimatePresence>
 
       {/* ==================== CÓDIGO QR COMPACTO Y CUADRADO FIJO EN LA ESQUINA ==================== */}
-      <div className="qrecito fixed bottom-6 left-6 z-50 w-36 h-48 sm:w-40 sm:h-48 bg-white rounded-2xl shadow-2xl border-4 border-amber-400 p-2.5 flex flex-col items-center justify-between text-center transition-transform hover:scale-105">
-        <div className="flex-1 flex items-center justify-center w-full">
+      <div className="qrecito fixed bottom-6 left-6 sm:bottom-8 sm:left-8 z-50 w-52 h-60 sm:w-56 sm:h-68 md:w-60 md:h-72 bg-white rounded-3xl shadow-2xl border-4 border-amber-400 p-3 sm:p-4 flex flex-col items-center justify-between text-center transition-transform hover:scale-105">
+        <div className="flex-1 flex items-center justify-center w-full p-1">
           {qrUrl ? (
-            <QRCode value={qrUrl} size={110} />
+            <QRCode
+              value={qrUrl}
+              size={160}
+              style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
+            />
           ) : (
-            <div className="w-24 h-24 bg-slate-200 animate-pulse rounded-lg" />
+            <div className="w-36 h-36 bg-slate-200 animate-pulse rounded-2xl" />
           )}
         </div>
-        <div className="w-full pt-1 border-t border-slate-100">
-          <span className="text-[10px] sm:text-xs font-black text-slate-900 block leading-tight tracking-tight">
+        <div className="w-full pt-1.5 sm:pt-2 border-t border-slate-100 mt-1">
+          <span className="text-[11px] sm:text-xs md:text-sm font-black text-slate-900 block leading-tight tracking-tight">
             ¡Escanea para subir tu saludo!
           </span>
         </div>
