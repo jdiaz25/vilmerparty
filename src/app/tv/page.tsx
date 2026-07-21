@@ -25,8 +25,8 @@ const BANNER_VIDEO_URL =
   process.env.NEXT_PUBLIC_BANNER_VIDEO_URL ||
   'https://res.cloudinary.com/demo/video/upload/v1689000000/party_loop.mp4';
 
-const CAROUSEL_SLIDE_DURATION_MS = 6000; // 6 segundos por diapositiva en carrusel
-const LIVE_HIGHLIGHT_DURATION_MS = 10000; // 10 segundos de destaque para nuevas fotos en vivo
+const CAROUSEL_SLIDE_DURATION_MS = 14000; // 14 segundos por diapositiva en carrusel
+const LIVE_HIGHLIGHT_DURATION_MS = 18000; // 18 segundos de destaque para nuevas fotos en vivo
 const VIDEO_MODE_DURATION_MS = 4 * 60 * 1000; // 4 minutos en modo video de presentación
 
 export default function TVPage() {
